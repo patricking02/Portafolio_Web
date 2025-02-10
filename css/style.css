@@ -190,6 +190,9 @@ img {
 }
 .home__data {
   align-self: center;
+  position: relative;
+  z-index: 2;
+  max-width: 60%;
 }
 .home__title {
   font-size: var(--big-font-size);
@@ -213,7 +216,7 @@ img {
 }
 .home__img {
   position: absolute;
-  right: 0;
+  right: -2rem;
   bottom: 0;
   width: 260px;
 }
@@ -423,6 +426,13 @@ img {
   .contact__container {
     justify-items: center;
   }
+  .home__img {
+    right: -1rem;
+    width: 200px;
+  }
+  .home__data {
+    max-width: 70%;
+  }
 }
 @media screen and (min-width: 768px) {
   body {
@@ -458,10 +468,16 @@ img {
   }
   .home {
     padding: 8rem 0 2rem;
+    height: 100vh; /* Añadido para controlar mejor la altura */
+  }
+  .home__data {
+    max-width: 45%; /* Reducido para dar más espacio */
+    padding-left: 2rem; /* Añadido para separar del borde */
   }
   .home__img {
-    width: 400px;
-    bottom: 10%;
+    width: 350px; /* Reducido el tamaño */
+    right: 2rem; /* Ajustado la posición */
+    bottom: 15%; /* Ajustado la posición vertical */
   }
   .about__container {
     padding-top: 2rem;
@@ -485,6 +501,9 @@ img {
     width: 80%;
     max-width: 400px;
   }
+  .home__data {
+    max-width: 50%;
+  }
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
@@ -495,7 +514,12 @@ img {
     padding: 10rem 0 2rem;
   }
   .home__img {
-    width: 450px;
+    width: 400px;
+    right: 4rem;
+    bottom: 10%;
+  }
+  .home__data {
+    max-width: 50%;
   }
 }
 
